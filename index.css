@@ -166,6 +166,9 @@ ul.navbar li a.link:hover {
 .sect {
     margin: 30px;
     padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: max(70%, 400px);
     p { 
         color: var(--text-subtle); 
         font-family: var(--main);
@@ -374,4 +377,5 @@ h1[class*="icon-"] {
         border: none;
     }
     margin-bottom: 12px;
+
 }
