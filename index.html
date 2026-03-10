@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroCons</title>
+    <link rel="stylesheet" href="index.css">
+
+    <!-- the icons -->
+    <link rel="stylesheet" href="/retrocons/css/animation.css">
+    <link rel="stylesheet" href="/retrocons/css/retrocons-codes.css">
+    <link rel="stylesheet" href="/retrocons/css/retrocons-embedded.css">
+    <link rel="stylesheet" href="/retrocons/css/retrocons-ie7-codes.css">
+    <link rel="stylesheet" href="/retrocons/css/retrocons-ie7.css">
+    <link rel="stylesheet" href="/retrocons/css/retrocons.css">
+
+    <link rel="stylesheet" href="/prism/prism.css">
+</head>
+<body>
+    <div id="bg"></div>
+    <div id="overlay">
+        <div id="preview">
+            <div id="preheader">
+                <h2>Preview</h2>
+                <button 
+                class="material-icons"
+                id="close">close</button>
+            </div>
+            <div class="flex">
+                <div id="glyph">
+                    <h1 class="icon-btn-a"
+                    id="icon"></h1>
+                </div>
+                <div>
+                    <p>HTML:</p>
+<pre><code class="lang-html"
+id="code">&lt;i class="icon-btn-a">&lt;/i></code></pre>
+                    <p>Copy Icon:</p>
+                <div class="flex">
+                    <button id="html">
+                        Copy HTML
+                        <i class="material-icons">
+                            content_copy
+                        </i>
+                    </button>
+                    <button id="unicode">
+                        Copy Unicode
+                        <i class="material-icons">
+                            content_copy
+                        </i>
+                    </button>
+                </div>
+</div>
+            </div> 
+        </div>
+    </div>
+
+    <!-- navbar -->
+    <ul class='navbar'>
+        <li class='uri'>
+
+            RetroCons
+        </li>
+        <li>
+            <a href='/index.html' class="link">
+                <b>Home</b>
+            </a>
+        </li>
+        <li>
+            <a href='/index.html#download' class="link">
+                Download
+            </a>
+        </li>
+        <li>
+            <a href='/index.html#about' class="link">
+                About
+            </a>
+        </li>
+    </ul>
+
+    <!-- banner -->
+    <div id="banner">
+        <h1>RetroCons</h1>
+    </div>
+
+    <!-- sections -->
+     <div class="sect" id="about">
+        <h2>About</h2>
+        <p>
+            RetroCons is an icon font 
+            made for typing input 
+            prompts for all consoles 
+            from the past 40+ years 
+            as a light-weight font.
+            The font is also open-source 
+            on GitHub, so if you'd like 
+            to check that out, please 
+            do so here:
+        </p>
+        <button>
+            View on Github
+            <i class="material-icons">
+                open_in_new
+            </i>
+        </button>
+     </div>
+
+     <div class="sect" id="glyphs">
+        <h2>Glyphs</h2>
+        <p>
+            Click on a glpyh to copy 
+            its HTML code to your 
+            clipboard.
+        </p>
+        <div id="glyphcont">
+            <div class="gbox" onclick="show('icon-btn')">
+                <h2 class="icon-btn-a"></h2>
+                <p>icon-btn-a</p>
+            </div>
+            <div class="gbox" onclick="show('icon-btn-b', '');">
+                <h2 class="icon-btn-b"></h2>
+                <p>icon-btn-b</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-x"></h2>
+                <p>icon-btn-x</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-y"></h2>
+                <p>icon-btn-y</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-c"></h2>
+                <p>icon-btn-c</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-z"></h2>
+                <p>icon-btn-z</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-l l"></h2>
+                <p>icon-btn-l</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-r l"></h2>
+                <p>icon-btn-r</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-zl l"></h2>
+                <p>icon-btn-zl</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-zr l"></h2>
+                <p>icon-btn-zr</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-l1 l"></h2>
+                <p>icon-btn-l1</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-l2 l"></h2>
+                <p>icon-btn-l2</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-r1 l"></h2>
+                <p>icon-btn-r1</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-r2 l"></h2>
+                <p>icon-btn-r2</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-gl"></h2>
+                <p>icon-btn-gl</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-gr"></h2>
+                <p>icon-btn-gr</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-l3 l"></h2>
+                <p>icon-btn-l3</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-r3 l"></h2>
+                <p>icon-btn-r3</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-dpad"></h2>
+                <p>icon-dpad</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-dpad-all"></h2>
+                <p>icon-dpad-all</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-dpad-up"></h2>
+                <p>icon-dpad-up</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-dpad-right"></h2>
+                <p>icon-dpad-right</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-dpad-down"></h2>
+                <p>icon-dpad-down</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-dpad-left"></h2>
+                <p>icon-dpad-left</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-dpad-x"></h2>
+                <p>icon-dpad-x</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-dpad-y"></h2>
+                <p>icon-dpad-y</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-start big"></h2>
+                <p>icon-start</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-select big"></h2>
+                <p>icon-select</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-ps-x"></h2>
+                <p>icon-btn-ps-x</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-ps-o"></h2>
+                <p>icon-btn-ps-o</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-ps-t"></h2>
+                <p>icon-btn-ps-t</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-ps-s"></h2>
+                <p>icon-btn-ps-s</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-sw2-chat"></h2>
+                <p>icon-btn-sw2-chat</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-sw-home"></h2>
+                <p>icon-btn-sw-home</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-sw-scr"></h2>
+                <p>icon-btn-sw-scr</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-stick-l"></h2>
+                <p>icon-stick-1</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-stick-r"></h2>
+                <p>icon-stick-r</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-stick-l-left"></h2>
+                <p>icon-stick-l-left</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-stick-l-up"></h2>
+                <p>icon-stick-l-up</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-stick-l-right"></h2>
+                <p>icon-stick-l-right</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-stick-l-down"></h2>
+                <p>icon-stick-l-down</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-stick-r-left"></h2>
+                <p>icon-stick-r-left</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-stick-r-up"></h2>
+                <p>icon-stick-r-up</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-stick-r-right"></h2>
+                <p>icon-stick-r-right</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-stick-r-down"></h2>
+                <p>icon-stick-r-down</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-1"></h2>
+                <p>icon-btn-1</p>
+            </div>
+            <div class="gbox">
+                <h2 class="icon-btn-2"></h2>
+                <p>icon-btn-2</p>
+            </div>
+        </div>
+     </div>
+
+     <div class="sect">
+        <h2>Using the Font</h2>
+        <p>
+            First, download the latest 
+            version of the font.
+        </p>
+        <button 
+        onclick="window.location.href='/RetroCons v1.0.zip';"
+        >
+            Download
+            <i class="material-icons">
+                download
+            </i>
+        </button>
+        <p>
+            Unzip the file and drag it 
+            in to the root of your 
+            project's file directory. 
+            and name it <c>retrocons</c>.
+            Next, add the following CSS 
+            links to the <c>head</c> 
+            section of your HTML file.
+        </p>
+        <pre><code class="language-css">/* CSS Links */
+&lt;link rel="stylesheet" href="/retrocons/css/animation.css">
+&lt;link rel="stylesheet" href="/retrocons/css/retrocons-codes.css">
+&lt;link rel="stylesheet" href="/retrocons/css/retrocons-embedded.css">
+&lt;link rel="stylesheet" href="/retrocons/css/retrocons-ie7-codes.css">
+&lt;link rel="stylesheet" href="/retrocons/css/retrocons-ie7.css">
+&lt;link rel="stylesheet" href="/retrocons/css/retrocons.css">
+        </code></pre>
+        <br>
+        <h2>Using the Icons</h2>
+        <p>
+            In order the use the 
+            icons, you need to give an 
+            element a specific class. That  
+            class is the icon id. You may do this 
+            to a <c>span</c> element, or 
+            <c>i</c>, whichever you prefer.
+            <br>
+            Here's an example, using the 
+            icon that represents 
+            <i class="icon-btn-a"></i>.
+        </p>
+
+<pre><code class="lang-html">&lt;!-- Example Code -->
+&lt;p>
+    &lt;i class="icon-btn-a">&lt;/i> - Jump
+&lt;/p>
+</code></pre>
+
+<br>
+<p>Result:</p>
+<div class="result">
+    <p>
+        <i class="icon-btn-a"></i>
+        - Jump
+    </p>
+</div>
+     </div>
+
+    <div class="sect">
+        <h2>General Usage</h2>
+        <p>
+            In order to just use the 
+            font normally outside of the 
+            browser, you can just copy 
+            the Unicode for that icon. 
+            The Unicode for all the icons 
+            can be found 
+            <a href="/index.html#glyphs">
+                here</a>.
+        </p>
+    </div>
+
+    <div class="sect">
+        <h2>Licensing</h2>
+        <p>
+            This font is available using 
+            the <b>CCO</b> license. That 
+            means you can use this font 
+            completely for free without 
+            credit, though, it would be 
+            appreciated.
+        </p>
+    </div>
+
+    <div class="sect" id="download">
+        <h2>Downloads</h2>
+        <p>
+            Latest Version (v1.0)
+        </p>
+        <button 
+        onclick="window.location.href='/RetroCons v1.0.zip';"
+        >
+            Download v1.0
+            <i class="material-icons">
+                download
+            </i>
+        </button>
+    </div>
+
+    <br><br>
+    <div id="footer">
+        <p>
+            RetroCons &bullet; Made by 
+            <b><a href="https://ggblockster.netlify.app/">ggblockster</a></b>.
+        </p>
+    </div>
+</body>
+<script src="/index.js"></script>
+<script src="/prism/prism.js"></script>
+</html>

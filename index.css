@@ -1,0 +1,377 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css?family=Be+Vietnam+Pro:wght=400,700&display=swap;");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:wght=400,500,600&display=swap;");
+@import url("https://fonts.googleapis.com/css?family=Material+Icons");
+
+* {
+    margin: 0;
+}
+
+:root {
+    /* colours */
+    --body: #234;
+    --heading: #2ea;
+    --text: #e0e0e0;
+    --text-subtle: #b6d4ca;
+    --text-muted: #789993;
+    --panel: #123;
+    --panel-light: #345;
+    --panel-hover: #1a2f44;
+    --accent: #6edda0;
+    --border: #2c3f52;
+    --divider: #293c4e;
+    --subtle: #1e3e50;
+    --shadow: #23213398;
+    --hover: #2c3f52;
+    --ltext: #0c1927;
+
+    /* fonts */
+    --main: "IBM Plex Sans";
+    --head: "Be Vietnam Pro";
+}
+
+html {
+    scrollbar-color: var(--panel-light) var(--body);
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin-top: 57px;
+    background: var(--body);
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--head);
+        font-weight: 700;
+        color: var(--heading);
+        padding-bottom: 5px;
+        border-bottom: var(--border) 2px solid;
+        margin-bottom: 15px;
+
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+    
+    button {
+        margin: 5px;
+        padding: 10px 16px;
+        margin-top: 15px;
+        margin-bottom: 12px;
+        border: none;
+        border-radius: 0.6em;
+        font-family: var(--main);
+        font-size: 1em;
+        font-weight: 500;
+        color: var(--ltext);
+        cursor: pointer;
+        transition: all 0.2s;
+        box-shadow: 0 3px 3px #00000080;
+        background: white;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 7px #00000080;
+    }
+}
+
+/* navbar */
+
+ul.navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    list-style: none;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 8px 25px;
+    background: #22334460;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px var(--shadow);
+    line-height: normal;
+    font-family: var(--main);
+    backdrop-filter: blur(7px); /* amount of blur */
+    -webkit-backdrop-filter: blur(7px); /* Safari support */
+}
+
+/* Title + icon */
+ul.navbar li.uri {
+  display: flex;
+  align-items: center;
+  color: white;
+  line-height: normal;
+}
+
+/* Text next to icon spacing */
+ul.navbar li.uri b {
+    margin-left: var(--icon-text-gap); /* precise control */
+}
+
+/* Push links to the right */
+ul.navbar li.uri + li {
+    margin-left: auto; /* first link after the title goes to the right */
+    line-height: normal;
+}
+
+/* Links styling */
+ul.navbar li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  line-height: normal;
+  transition: outline 0.3s ease;
+  border-radius: 8px;
+  outline: transparent 3px solid;
+}
+
+/* Text links hover (excluding icons) */
+ul.navbar li a.link:hover {
+    color: var(--accent);
+}
+
+/* Icon sizing */
+.site-icon {
+  height: 28px;
+  width: auto;
+  display: inline-block;
+  padding: 0;
+}
+
+/* sections */
+
+/* banner */
+#banner {
+    height: calc(300px + 3vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sect {
+    margin: 30px;
+    padding: 30px;
+    p { 
+        color: var(--text-subtle); 
+        font-family: var(--main);
+        max-width: 500px;
+    }
+    a {
+        color: var(--heading)
+    }
+    background: var(--panel);
+    border-radius: 12px;
+    box-shadow: 8px 8px 0 black;
+    scroll-margin-top: 60px;
+    c {
+        background: var(--panel-hover);
+        padding: 0px 6px;
+        border-radius: 4px;
+    }
+    /* For Firefox */
+    ::-moz-selection {
+        background: var(--subtle);
+    }
+    /* For other browsers */
+    ::selection {
+        background: var(--subtle);
+    }
+    b {
+        color: var(--heading)
+    }
+}
+
+.material-icons {
+    vertical-align: -0.2em;
+    font-size: 20px;
+}
+
+#bg {
+    background-image: url("/img/bg.png");
+    background-repeat: repeat;
+    background-size: 100px;
+    position: fixed;       /* Keeps it fixed relative to the viewport */
+    top: 0;                /* Align to top of viewport */
+    left: 0;               /* Align to left of viewport */
+    width: 100vw;          /* Full width of viewport */
+    height: 100vh;         /* Full height of viewport */
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#glyphcont {
+    border: var(--border) 2px solid;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    height: 400px;
+    overflow-y: auto;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    scrollbar-color: var(--panel-light)
+    transparent;
+}
+
+.gbox {
+    width: 80px;
+    padding: 10px;
+    border: var(--border) 2px solid;
+    height: 100px;
+    h2 {
+        font-weight: normal;
+        font-family: "Retrocons";
+        padding-top: 10px;
+        border: none;
+    }
+    p {
+        border-top: var(--border) 2px solid;
+        padding-top: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.gbox:hover {
+    transform: scale(1.05);
+    background-color: #13273a;
+}
+
+.l {
+    transform: translateX(-0.3em);
+}
+
+.big {
+    transform: translateX(-0.95em);
+}
+/* the font you came here for */
+/* v1.0 btw */
+@font-face {
+    font-family: "Retrocons";
+    src: url("/retrocons/font/retrocons.ttf");
+}
+
+.result {
+    background: #d0d0d0;
+    padding: 10px;
+    border-radius: 0.4em;
+    p {
+        color: #000;
+    }
+    margin: 10px 0;
+    /* For Firefox */
+    ::-moz-selection {
+        background: var(--text-muted);
+    }
+    /* For other browsers */
+    ::selection {
+        background: var(--text-muted);
+    }
+}
+
+#footer {
+    background: var(--panel);
+    color: var(--text-subtle);
+    font-family: var(--main);
+    position: fixed;
+    width: stretch;
+    bottom: 0;
+    padding: 10px;
+    border-top: var(--border) 2px solid;
+    a {
+        color: var(--heading);
+        text-decoration: none;
+    }
+    z-index: 1000;
+}
+
+/* overlays */
+#overlay {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(7px); /* amount of blur */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#preview {
+    position: block;
+    z-index: 1001;
+    display: flex;
+    transform: translateY(50%);
+    background: var(--panel);
+    p {
+        color: var(--text-subtle);
+    }
+    button i.material-icons {
+        font-size: 18px;
+    }
+    font-family: var(--main);
+    padding: 20px;
+    border: var(--border) 2px solid;
+    border-radius: 8px;
+    box-shadow: 8px 8px #000;
+}
+
+h1[class*="icon-"] {
+    border: none;
+    margin-top: calc(50% + 0.2em);
+}
+
+#glyph {
+    background: #0a0a0a;
+    padding: 15px;
+    border-radius: 6px;
+    width: 4.3em;
+}
+
+.flex {
+    display: flex;
+    gap: 10px;
+}
+
+#preheader {
+    justify-content: space-between;
+    display: flex;
+    border-bottom: var(--border) 2px solid;
+    button {
+        margin: 0;
+        padding: 0;
+        transform: translateY(-0.8em);
+        box-shadow: none;
+        color: var(--text);
+        background: none;
+    }
+    button:hover {
+        color: var(--text-muted);
+    }
+    h2 {
+        border: none;
+    }
+    margin-bottom: 12px;
+}
